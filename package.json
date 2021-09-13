@@ -1,0 +1,25 @@
+{
+  "name": "ProductivityTracker-PersonalProject2.5",
+  "version": "1.0.0",
+  "description": "Tracker to plan out productivity for the day, whether by the Pomodoro Technique or a custom schedule.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5/issues"
+  },
+  "homepage": "https://github.com/andycwilliams/ProductivityTracker-PersonalProject2.5#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.1.1",
+    "mongoose": "^6.0.5"
+  }
+}
