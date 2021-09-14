@@ -1,6 +1,8 @@
 # DailyProductivityTracker-PersonalProject2.5
 Tracker to plan out productivity for the day, whether by the Pomodoro Technique or a custom schedule. 
 
+Try NOT to use express
+
 ## Potential inclusions: 
 * Begins with template
 * Has tips for more effective study and retention
