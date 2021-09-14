@@ -1,7 +1,8 @@
 # DailyProductivityTracker-PersonalProject2.5
 Tracker to plan out productivity for the day, whether by the Pomodoro Technique or a custom schedule. 
 
-Try NOT to use express
+Try NOT to use express by default. It has a lot of boilerplate design for huge solutions
+Lambda (sic? designs are more modular with specific methods (e.g. 3-4 discreet operations)
 
 Important:
 Accessible
