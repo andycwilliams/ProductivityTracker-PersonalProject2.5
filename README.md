@@ -18,6 +18,9 @@ Eases anxiety, doesn't cause it
 ## MVPs: 
 
 
+Stretch goals:
+Leaderboard, compare results with friends, compare rates to past/average
+
 -----
 
 
