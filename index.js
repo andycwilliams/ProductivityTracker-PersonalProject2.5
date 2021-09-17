@@ -4,6 +4,13 @@ const client = new MongoClient('mongodb://localhost:27017');
 const db = client.db('birds');
 const collection = db.collection('documents');
 
+// Start with front end (user interface), get elements I want rendered
+// Then populate with data
+// Don't worry about handlebars. Keep it as simple as possible
+// Point is to get familiar with serverless and implement it on a project
+
+
+
 // const getBirds = (collection) => collection.find({}).toArray();
 
 // const addBird = async (collection) => {
