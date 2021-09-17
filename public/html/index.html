@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Productivity Tracker - Main Page</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,6 +19,8 @@
 
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Navbar Link</a></li>
+        <li><a href="#info">Information Link</a></li>
+        <li><a href="#worksheet">Worksheet</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -26,18 +28,36 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
+      <h1 class="header center orange-text">Productivity Tracker</h1>
       <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <h5 class="header col s12 light">Random Tip and/or Timer element</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+        <a href="" id="download-button" class="btn-small waves-effect waves-light orange">Choose Minutes</a>
+      </div>
+      <div class="row center">
+        <a href="" id="download-button" class="btn-large waves-effect waves-light orange">Start Timer</a>
       </div>
       <br><br>
 
     </div>
   </div>
 
+<section>
+    <h1>Timer</h1>
+    <button id="setTime">00 minutes. 25 by default</button>
+    <button id="lightMode">Light Mode</button>
+    <button id="darkMode">Dark Mode</button>
+    <button id="ticking">Toggle Sound</button>
+</section>
+
+<section>
+    <h1>Today's Goals</h1>
+    <div>Example text</div>
+    <p>Item 1</p>
+    <p>Item 2</p>
+    <p>Item 3</p>
+</section>
 
   <div class="container">
     <div class="section">
@@ -46,31 +66,12 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <!-- <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2> -->
             <h5 class="center">Speeds up development</h5>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            <p class="light">Add daily sheet here. With ability to check off each item/add how many sessions</p>
           </div>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
 
     </div>
     <br><br>
@@ -82,7 +83,6 @@
         <div class="col l6 s12">
           <h5 class="white-text">Company Bio</h5>
           <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
 
         </div>
         <div class="col l3 s12">
@@ -122,7 +122,12 @@
 </html>
 
 
+
+
 <!-- ----------------------------- -->
+
+
+
 
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -165,43 +170,6 @@
         </section>
 
         <div>Tip (randomly chosen each time): </div>
-
-        <section>
-            <h1>Background info (e.g. on the mind)</h1>
-            <div>
-                <p>The single biggest source of distractions is our own minds. The best way to deal with these iterrupting thoughts is to accept them
-                and not punish ourselves over it. Write them down to deal with after your focus session is over. Lets you decide how important they reall are.</p>
-                <p>Too many of these is how our brains tell us we're not in a focused state. It often feels like we have to take care of it right away if not 
-                    just write them down before we forget. Usually we can put off these for as little as 25 minutes.</p>
-                <p>The importance of developing habits</p>
-                <p>Two interrelated things about time: Becoming and the Succession of Events. Becoming is the process of representing time in a dimension. This extends to
-                    things like the concept of duration of events and being early or late</p>
-                <p>The Succession of Events is represneted by our daily process such as waking up, eating breakfast, getting ready for the day, etc. 
-                    It also involves the concept of time progressing even without these events occurring.</p>
-                <p>Becoming is the one that causes us anxiety because it is by definition abstract and intangible. We see ourselves as more concrete, so when we 
-                    comparing ourselves against it, we invariably feel like we don't measure up. It saps us of motivation and feelings of accomplishment.</p>
-                <p>You can train yourself to no longer focus on Becoming and ease anxiety</p>
-                <p>Why so many productivity systems fail: They add another layer of complexity on an already complex process.
-                    It only distracts us more.</p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-        </section>
-
-        <section>
-            <h1>Structure</h1>
-            <div>What/When/Why</div>
-            <p>Planning/Start of day/To decide the day's activities</p>
-            <p>Tracking/Throughout day/gather data on effort used and extrapolate any useful info</p>
-            <p>Recording/End of day/create archive of daily observations</p>
-            <p>Processing/End of day/turn data into information</p>
-            <p>Visualizing/End of day/present that information in a legible format so we can formulate improvements </p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
 
         <section>
             <h1>Tips</h1>
@@ -253,16 +221,6 @@
             <p></p>
             <p></p>
             <p></p>
-        </section>
-
-        <section>
-            <h1>References/Citations/Further reading: (AUTHOR, PUBLICATION YEAR, LINKS, etc.</h1>
-            <div>Example text</div>
-            <p>The Pomodoro Technique</p>
-            <p>A Mind for Numbers</p>
-            <p>Learning How to Learn</p>
-            <p>Digital Minimalism</p>
-            <p>Hyperfocus</p>
         </section>
 
     </main>
