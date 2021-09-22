@@ -62,6 +62,7 @@ function startTimer(duration, display) {
 };
 
 // ----------------------------------------------------------------
+
 const randomQuoteArr = [
   'In the evening, write down the most important things you need to do the next day.',
   'Don\'t write down so much that you overwhelm yourself.',
@@ -70,6 +71,11 @@ const randomQuoteArr = [
   '"Eat your frogs first."',
   'Time is not an enemy. When handled correctly, it can even be turned into an ally.'
 ];
+
+const randomQuoteGenerator = () => {
+  const randomNo =- Math.floor(Math.random() * (randomQuoteArr.length));
+  document.querySelector('#randomTip').innerHTML = randomQuoteArr[randomNo];
+};
 
 // ----------------------------------------------------------------
 
