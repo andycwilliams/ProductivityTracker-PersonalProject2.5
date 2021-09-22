@@ -30,10 +30,14 @@ const collection = db.collection('documents');
 
 // client.connect().then(() => app.listen(3000));
 
+const chooseMinutes = () => {
+
+};
+
 const sessionTimer = () => {
   const sec = 30;
   const timer = setInterval(function(){
-      document.getElementById('safeTimerDisplay').innerHTML='00:'+sec;
+      document.getElementById('timerDisplay').innerHTML='00:'+sec;
       sec--;
       if (sec < 0) {
           clearInterval(timer);
@@ -42,7 +46,7 @@ const sessionTimer = () => {
 };
 
 function startTimer(duration, display) {
-  var timer = duration, minutes, seconds;
+  const timer = duration, minutes, seconds;
   setInterval(function () {
       minutes = parseInt(timer / 60, 10)
       seconds = parseInt(timer % 60, 10);
@@ -60,11 +64,10 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-  var time = 60 / 2, // your time in seconds here
-      display = document.querySelector('#safeTimerDisplay');
+  const time = 60 / 2, // your time in seconds here
+      display = document.querySelector('#timerDisplay');
   startTimer(time, display);
 };
-
 
 
 const taskContainer = () => {
