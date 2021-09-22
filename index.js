@@ -9,26 +9,7 @@
 // Don't worry about handlebars. Keep it as simple as possible
 // Point is to get familiar with serverless and implement it on a project
 
-
-
-// const getBirds = (collection) => collection.find({}).toArray();
-
-// const addBird = async (collection) => {
-//   const result = await collection.insertMany([
-//     { name: 1 },
-//     { name: 2 },
-//     { name: 3 },
-//   ]);
-//   console.log(result);
-//   return collection;
-// };
-
-// app.get('/', async function (req, res) {
-//   const birds = await getBirds(collection);
-//   res.json(birds);
-// });
-
-// client.connect().then(() => app.listen(3000));
+// -------------------------------- Choose Time Function --------------------------------
 
 const chooseMinutes = () => {
     let minutesBtn = document.querySelector("#choose");
@@ -39,6 +20,8 @@ const chooseMinutes = () => {
        console.log(randomNo, userNo);
     };
 };
+
+// -------------------------------- Timer Function --------------------------------
 
 function startTimer(duration, display) {
   let timer = duration, minutes, seconds;
@@ -61,7 +44,7 @@ function startTimer(duration, display) {
   }, 1000);
 };
 
-// ----------------------------------------------------------------
+// -------------------------------- Random Qoute Generator --------------------------------
 
 const randomQuoteArr = [
   'In the evening, write down the most important things you need to do the next day.',
@@ -77,9 +60,7 @@ const randomQuoteGenerator = () => {
   document.querySelector('#randomTip').innerHTML = randomQuoteArr[randomNo];
 };
 
-randomQuoteGenerator();
-
-// ----------------------------------------------------------------
+// -------------------------------- Task Generator --------------------------------
 
 const taskContainer = () => {
   for (let i = 0; i < 10; i++){
@@ -119,7 +100,29 @@ window.onload = function () {
   startTimer(fiveMinutes, display);
 };
 
+randomQuoteGenerator();
 taskContainer();
+
+// ----------------------------------------------------------------
+
+// const getBirds = (collection) => collection.find({}).toArray();
+
+// const addBird = async (collection) => {
+//   const result = await collection.insertMany([
+//     { name: 1 },
+//     { name: 2 },
+//     { name: 3 },
+//   ]);
+//   console.log(result);
+//   return collection;
+// };
+
+// app.get('/', async function (req, res) {
+//   const birds = await getBirds(collection);
+//   res.json(birds);
+// });
+
+// client.connect().then(() => app.listen(3000));
 
 // ----------------------------------------------------------------
 
