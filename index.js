@@ -12,12 +12,12 @@
 // -------------------------------- Choose Time Function --------------------------------
 
 const chooseMinutes = () => {
-    const minutesBtn = document.querySelector("#chooseMin");
-    console.log(minutesBtn);
+    // const minutesBtn = document.querySelector("#chooseMin");
+    // console.log(minutesBtn);
     const userNo = document.querySelector("#inputNo").value;
     console.log(userNo);
-    const valueInt = parseInt(userNo, 100);
-    console.log(valueInt);
+    // const valueInt = parseInt(userNo, 100);
+    // console.log(valueInt);
 
     // let minutesBtn = document.querySelector("#chooseMin");
     // let randomNo = Math.ceil(Math.random() * 100);
@@ -27,6 +27,8 @@ const chooseMinutes = () => {
     //    console.log(randomNo, userNo);
     // };
 };
+
+document.querySelector("#chooseMin").addEventListener("click", chooseMinutes());
 
 // -------------------------------- Timer Function --------------------------------
 
