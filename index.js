@@ -1,8 +1,8 @@
-const { MongoClient } = require('mongodb');
-const axios = require('axios');
-const client = new MongoClient('mongodb://localhost:27017');
-const db = client.db('birds');
-const collection = db.collection('documents');
+// const { MongoClient } = require('mongodb');
+// const axios = require('axios');
+// const client = new MongoClient('mongodb://localhost:27017');
+// const db = client.db('birds');
+// const collection = db.collection('documents');
 
 // Start with front end (user interface), get elements I want rendered
 // Then populate with data
@@ -34,39 +34,27 @@ const chooseMinutes = () => {
 
 };
 
-const sessionTimer = () => {
-  const sec = 30;
-  const timer = setInterval(function(){
-      document.getElementById('timerDisplay').innerHTML='00:'+sec;
-      sec--;
-      if (sec < 0) {
-          clearInterval(timer);
-      };
-  }, 1000);
-};
-
 function startTimer(duration, display) {
-  const timer = duration, minutes, seconds;
+  // let timeLeft = 300;
+  let timer = duration, minutes, seconds;
   setInterval(function () {
-      minutes = parseInt(timer / 60, 10)
+      minutes = parseInt(timer / 60, 10);
       seconds = parseInt(timer % 60, 10);
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
+      minutes = minutes < 10 ? minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
 
       display.textContent = minutes + ":" + seconds;
 
-      if (--timer < 0) {
-          timer = 0;
-          // timer = duration; // uncomment this line to reset timer automatically after reaching 0
-      }
-  }, 1000);
-}
+      // timeLeft--;
 
-window.onload = function () {
-  const time = 60 / 2, // your time in seconds here
-      display = document.querySelector('#timerDisplay');
-  startTimer(time, display);
+      if (--timer < 0) {
+          timer = duration;
+          console.log("Time's up!");
+          // handleLoss();
+          // clearInterval(intervalEl);
+      };
+  }, 10); //1000
 };
 
 
@@ -99,5 +87,43 @@ const taskContainer = () => {
       // itemEl.appendChild(hourEl);
       itemEl.appendChild(textAreaEl);
       itemEl.appendChild(addItemBtn);
-    };
   };
+};
+
+  // ----------------------------------------------------------------
+
+  // window.onload = function () {
+  //   const time = 60 / 2, // your time in seconds here
+  //       display = document.querySelector('#timerDisplay');
+  //   startTimer(time, display);
+  // };
+  
+  // const sessionTimer = () => {
+  //   const sec = 30;
+  //   const timer = setInterval(function(){
+  //       document.getElementById('timerDisplay').innerHTML='00:'+sec;
+  //       sec--;
+  //       if (sec < 0) {
+  //           clearInterval(timer);
+  //       };
+  //   }, 1000);
+  // };
+  
+  // function startTimer(duration, display) {
+  //   const timer = duration, minutes, seconds;
+  //   document.getElementById('timerDisplay').innerHTML = '00:' + sec;
+  //   setInterval(function () {
+  //       minutes = parseInt(timer / 60, 10)
+  //       seconds = parseInt(timer % 60, 10);
+  
+  //       minutes = minutes < 10 ? "0" + minutes : minutes;
+  //       seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+  //       display.textContent = minutes + ":" + seconds;
+  
+  //       if (--timer < 0) {
+  //           timer = 0;
+  //           // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+  //       }
+  //   }, 1000);
+  // }
