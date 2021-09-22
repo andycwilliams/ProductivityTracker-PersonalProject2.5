@@ -1,13 +1,9 @@
-# DailyProductivityTracker-PersonalProject2.5
+# Daily Productivity Tracker
 Tracker to plan out productivity for the day, whether by the Pomodoro Technique or a custom schedule. 
+My submission for University of Oregpn's Full-Stack Development Boot Camp personal project.
 
-Try NOT to use express by default. It has a lot of boilerplate design for huge solutions
-Lambda (sic? designs are more modular with specific methods (e.g. 3-4 discreet operations)
-
-Important:
-Accessible
-Intuitive
-Eases anxiety, doesn't cause it
+Try NOT to use express by default. It has a lot of boilerplate design for huge solutions.
+Lambda (sic? designs are more modular with specific methods (e.g. 3-4 discreet operations).
 
 ## Potential inclusions: 
 * Begins with template
@@ -17,18 +13,19 @@ Eases anxiety, doesn't cause it
 
 ## MVPs: 
 
-
 Stretch goals:
 Leaderboard, compare results with friends, compare rates to past/average
+Light and dark modes
 
 -----
-
 
 # Title 
 ![Alt text](LICENSE BADGE HTML)
 
 ## Description
-Description
+Accessible
+Intuitive
+Eases anxiety, doesn't cause it
 
 ## Table of Contents
 - [Installation](#installation)
