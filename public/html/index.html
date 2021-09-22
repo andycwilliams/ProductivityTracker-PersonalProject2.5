@@ -30,15 +30,18 @@
       <br><br>
       <h1 class="header center orange-text">Productivity Tracker</h1>
       <div class="row center">
-        <h5 class="header col s12 light" id="randomTip">(Random Tip)</h5>
+        <!-- <h5 class="header col s12 light" id="randomTip">(Random Tip)</h5> -->
+        <div class="card-panel hoverable" id="randomTip">(Random Tip)</div>
       </div>
       <div class="row center">
-        <a id="chooseMinutes" class="btn-small waves-effect waves-light orange">Choose Minutes</a>
+        <h2><a id="timerDisplay" class="truncate">00:00</a></h2>
+      </div>
+      <div class="row center">
+        <a id="chooseMinutes" class="btn-large waves-effect waves-light orange">Choose Minutes</a>
       </div>
       <div class="row center">
         <a id="timer" class="btn-large waves-effect waves-light orange" onclick="startTimer()">Start Timer</a>
       </div>
-      <h2 id="timerDisplay">00:00</h2>
       <br><br>
 
     </div>
@@ -53,16 +56,16 @@
     <button id="ticking">Toggle Sound</button>
 </section> -->
 
-<div class="container container-fluid">
+<div class="card-panel hoverable">
   <p><strong> Example:</strong> choose a number between 1 to 100</p>
   <form>
-  <div class="form-group">
-  <label for="number">Give a number:</label>
-  <input id="inputNumber" value="" type="text" name="number" />
+    <div class="form-group">
+    <label for="number">Give a number:</label>
+    <input id="inputNumber" value="" type="text" name="number" />
   </form>
   <p id="output"></p>
-  </div>
   <button class="btn btn-dark" id="choose" type="submit" onclick="chooseMinutes()">Click Me</button>
+</div>
 
   <div class="container">
     <div class="section">
