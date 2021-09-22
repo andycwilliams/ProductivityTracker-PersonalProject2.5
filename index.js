@@ -73,9 +73,11 @@ const randomQuoteArr = [
 ];
 
 const randomQuoteGenerator = () => {
-  const randomNo =- Math.floor(Math.random() * (randomQuoteArr.length));
+  const randomNo = Math.floor(Math.random() * (randomQuoteArr.length));
   document.querySelector('#randomTip').innerHTML = randomQuoteArr[randomNo];
 };
+
+randomQuoteGenerator();
 
 // ----------------------------------------------------------------
 
