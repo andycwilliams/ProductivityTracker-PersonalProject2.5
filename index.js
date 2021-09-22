@@ -35,7 +35,6 @@ const chooseMinutes = () => {
 };
 
 function startTimer(duration, display) {
-  // let timeLeft = 300;
   let timer = duration, minutes, seconds;
   setInterval(function () {
       minutes = parseInt(timer / 60, 10);
@@ -46,17 +45,16 @@ function startTimer(duration, display) {
 
       display.textContent = minutes + ":" + seconds;
 
-      // timeLeft--;
-
       if (--timer < 0) {
           timer = duration;
           console.log("Time's up!");
           // handleLoss();
           // clearInterval(intervalEl);
       };
-  }, 10); //1000
+  }, 1000);
 };
 
+// ----------------------------------------------------------------
 
 const taskContainer = () => {
   for (let i = 0; i < 10; i++){
@@ -83,47 +81,55 @@ const taskContainer = () => {
       //     itemEl.classList.add("future");
       // };
 
-      timeBlockContainer.appendChild(itemEl);
+      // timeBlockContainer.appendChild(itemEl);
       // itemEl.appendChild(hourEl);
       itemEl.appendChild(textAreaEl);
       itemEl.appendChild(addItemBtn);
   };
 };
 
-  // ----------------------------------------------------------------
+window.onload = function () {
+  const fiveMinutes = 60 * 5,
+      display = document.querySelector('#timerDisplay');
+  startTimer(fiveMinutes, display);
+};
 
-  // window.onload = function () {
-  //   const time = 60 / 2, // your time in seconds here
-  //       display = document.querySelector('#timerDisplay');
-  //   startTimer(time, display);
-  // };
-  
-  // const sessionTimer = () => {
-  //   const sec = 30;
-  //   const timer = setInterval(function(){
-  //       document.getElementById('timerDisplay').innerHTML='00:'+sec;
-  //       sec--;
-  //       if (sec < 0) {
-  //           clearInterval(timer);
-  //       };
-  //   }, 1000);
-  // };
-  
-  // function startTimer(duration, display) {
-  //   const timer = duration, minutes, seconds;
-  //   document.getElementById('timerDisplay').innerHTML = '00:' + sec;
-  //   setInterval(function () {
-  //       minutes = parseInt(timer / 60, 10)
-  //       seconds = parseInt(timer % 60, 10);
-  
-  //       minutes = minutes < 10 ? "0" + minutes : minutes;
-  //       seconds = seconds < 10 ? "0" + seconds : seconds;
-  
-  //       display.textContent = minutes + ":" + seconds;
-  
-  //       if (--timer < 0) {
-  //           timer = 0;
-  //           // timer = duration; // uncomment this line to reset timer automatically after reaching 0
-  //       }
-  //   }, 1000);
-  // }
+taskContainer();
+
+// ----------------------------------------------------------------
+
+// window.onload = function () {
+//   const time = 60 / 2, // your time in seconds here
+//       display = document.querySelector('#timerDisplay');
+//   startTimer(time, display);
+// };
+
+// const sessionTimer = () => {
+//   const sec = 30;
+//   const timer = setInterval(function(){
+//       document.getElementById('timerDisplay').innerHTML='00:'+sec;
+//       sec--;
+//       if (sec < 0) {
+//           clearInterval(timer);
+//       };
+//   }, 1000);
+// };
+
+// function startTimer(duration, display) {
+//   const timer = duration, minutes, seconds;
+//   document.getElementById('timerDisplay').innerHTML = '00:' + sec;
+//   setInterval(function () {
+//       minutes = parseInt(timer / 60, 10)
+//       seconds = parseInt(timer % 60, 10);
+
+//       minutes = minutes < 10 ? "0" + minutes : minutes;
+//       seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//       display.textContent = minutes + ":" + seconds;
+
+//       if (--timer < 0) {
+//           timer = 0;
+//           // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+//       }
+//   }, 1000);
+// }
