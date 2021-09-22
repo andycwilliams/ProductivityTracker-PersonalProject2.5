@@ -12,13 +12,20 @@
 // -------------------------------- Choose Time Function --------------------------------
 
 const chooseMinutes = () => {
-    let minutesBtn = document.querySelector("#choose");
-    let randomNo = Math.ceil(Math.random() * 100);
-    minutesBtn.onclick = function() {
-       let userNo = document.querySelector("#inputNumber").value;
-       let valueInt = parseInt(userNo, 100);
-       console.log(randomNo, userNo);
-    };
+    const minutesBtn = document.querySelector("#chooseMin");
+    console.log(minutesBtn);
+    const userNo = document.querySelector("#inputNo").value;
+    console.log(userNo);
+    const valueInt = parseInt(userNo, 100);
+    console.log(valueInt);
+
+    // let minutesBtn = document.querySelector("#chooseMin");
+    // let randomNo = Math.ceil(Math.random() * 100);
+    // minutesBtn.onclick = function() {
+    //    let userNo = document.querySelector("#inputNo").value;
+    //    let valueInt = parseInt(userNo, 100);
+    //    console.log(randomNo, userNo);
+    // };
 };
 
 // -------------------------------- Timer Function --------------------------------
@@ -52,7 +59,9 @@ const randomQuoteArr = [
   'Focus on process, not product.',
   'Recollection is one of the most effective learning methods.',
   '"Eat your frogs first."',
-  'Time is not an enemy. When handled correctly, it can even be turned into an ally.'
+  'Time is not an enemy. When handled correctly, it can even be turned into an ally.',
+  'Knowing when to take breaks is just as important as the work itself!',
+  'Flash cards are cheap and effective ways to drill yourself on smaller concepts.'
 ];
 
 const randomQuoteGenerator = () => {

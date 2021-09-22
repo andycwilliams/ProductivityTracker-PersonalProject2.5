@@ -25,8 +25,9 @@
   </nav>
 
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container"><br><br>
+    <div class="container">
       <h1 class="header center orange-text">Productivity Tracker</h1>
+      <p class="center">Useful for studying, practice, work, and anything else requiring concentration!</p>
       <div class="row center">
         <div class="card-panel hoverable">
           <h5>Tip:</h5>
@@ -37,7 +38,7 @@
         <h2><a id="timerDisplay" class="truncate">00:00</a></h2>
       </div>
       <div class="row center">
-        <a id="chooseMinutes" class="btn-large waves-effect waves-light orange">Choose Minutes</a>
+        <a id="chooseMinutes" class="btn-large waves-effect waves-light orange">Choose Minutes <p>25 is recommended!</p> </a>
         <a id="timer" class="btn-large waves-effect waves-light orange" onclick="startTimer()">Start Timer</a>
       </div>
       <div class="row center">
@@ -53,28 +54,13 @@
     <form>
       <div class="form-group">
       <label for="number">Give a number:</label>
-      <input id="inputNumber" value="" type="text" name="number" />
+      <input id="inputNo" value="" type="text" name="number" />
     </form>
     <p id="output"></p>
-    <button class="btn btn-dark" id="choose" type="submit" onclick="chooseMinutes()">Click Me</button>
+    <button class="btn btn-dark" id="chooseMin" type="submit" onclick="chooseMinutes()">Set Timer</button>
   </div>
 
   <div class="container">
-
-    <div class="section">
-      <div class="row">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h5 class="center">Today's Goals</h5>
-              <label for="number">Give a number:</label>
-              <input id="inputNumber" value="" type="text" name="number" />
-              </form>
-              <p id="output"></p>
-              <button class="btn btn-dark" id="choose" type="submit" onclick="chooseMinutes()">Click Me</button>
-            </div>
-          </div>
-      </div><br><br>
-    </div>
 
     <div class="row">
       <div class="col s12 m4">
@@ -107,15 +93,15 @@
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="https://github.com/andycwilliams">GitHub</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/andrewcharleswilliams/">LinkedIn</a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
             <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
       </div>
     </div>
-    
+
     <div class="footer-copyright">
       <div class="container">
       Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
