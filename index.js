@@ -14,18 +14,20 @@
 const chooseMinutes = () => {
     // const minutesBtn = document.querySelector("#chooseMin");
     // console.log(minutesBtn);
-    const userNo = document.querySelector("#inputNo").value;
-    console.log(userNo);
+    // const userNo = document.querySelector("#inputNo").value;
+    // console.log(userNo);
     // const valueInt = parseInt(userNo, 100);
     // console.log(valueInt);
 
-    // let minutesBtn = document.querySelector("#chooseMin");
+    let minutesBtn = document.querySelector("#chooseMin");
     // let randomNo = Math.ceil(Math.random() * 100);
-    // minutesBtn.onclick = function() {
-    //    let userNo = document.querySelector("#inputNo").value;
-    //    let valueInt = parseInt(userNo, 100);
-    //    console.log(randomNo, userNo);
-    // };
+    minutesBtn.onclick = function() {
+       let userNo = document.querySelector("#inputNo").value;
+      //  let valueInt = parseInt(userNo, 100);
+       console.log(`userNo: ${userNo}`);
+      //  console.log(`valueInt: ${valueInt}`);
+      //  console.log(`randomNo: ${randomNo}, userNo: ${userNo}`);
+    };
 };
 
 document.querySelector("#chooseMin").addEventListener("click", chooseMinutes());
