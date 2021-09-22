@@ -31,7 +31,13 @@
 // client.connect().then(() => app.listen(3000));
 
 const chooseMinutes = () => {
-
+    let minutesBtn = document.querySelector("#choose");
+    let randomNo = Math.ceil(Math.random() * 100);
+    minutesBtn.onclick = function() {
+       let userNo = document.querySelector("#inputNumber").value;
+       let valueInt = parseInt(userNo, 100);
+       console.log(randomNo, userNo);
+    };
 };
 
 function startTimer(duration, display) {
@@ -48,6 +54,7 @@ function startTimer(duration, display) {
       if (--timer < 0) {
           timer = duration;
           console.log("Time's up!");
+          // playSound();
           // handleLoss();
           // clearInterval(intervalEl);
       };
@@ -61,17 +68,17 @@ const taskContainer = () => {
       const itemEl = document.createElement("div");
       // const hourEl = document.createElement("div");
       const textAreaEl = document.createElement("textarea");
-      const addItemBtn = document.createElement("button");
+      const addItemminutesBtn = document.createElement("button");
 
       // hourEl.textContent = i + ":00";
-      addItemBtn.innerText = "Add";
+      addItemminutesBtn.innerText = "Add";
 
       itemEl.setAttribute("id", "hour-", + i);
       itemEl.classList.add("row", "time-block")
       // hourEl.classList.add("col-sm-12", "hour");
       textAreaEl.classList.add("col-sm-11", "description");
       textAreaEl.setAttribute("id", "Dynamically Generated ID")
-      addItemBtn.classList.add("col-sm-1", "btn", "addItemBtn");
+      addItemminutesBtn.classList.add("col-sm-1", "minutesBtn", "addItemminutesBtn");
 
       // if (i < currentTimeEl){
       //     itemEl.classList.add("past");
@@ -84,7 +91,7 @@ const taskContainer = () => {
       // timeBlockContainer.appendChild(itemEl);
       // itemEl.appendChild(hourEl);
       itemEl.appendChild(textAreaEl);
-      itemEl.appendChild(addItemBtn);
+      itemEl.appendChild(addItemminutesBtn);
   };
 };
 

@@ -30,7 +30,7 @@
       <br><br>
       <h1 class="header center orange-text">Productivity Tracker</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Random Tip and/or Timer element</h5>
+        <h5 class="header col s12 light" id="randomTip">(Random Tip)</h5>
       </div>
       <div class="row center">
         <a id="chooseMinutes" class="btn-small waves-effect waves-light orange">Choose Minutes</a>
@@ -52,6 +52,17 @@
     <button id="darkMode">Dark Mode</button>
     <button id="ticking">Toggle Sound</button>
 </section> -->
+
+<div class="container container-fluid">
+  <p><strong> Example:</strong> choose a number between 1 to 100</p>
+  <form>
+  <div class="form-group">
+  <label for="number">Give a number:</label>
+  <input id="inputNumber" value="" type="text" name="number" />
+  </form>
+  <p id="output"></p>
+  </div>
+  <button class="btn btn-dark" id="choose" type="submit" onclick="chooseMinutes()">Click Me</button>
 
   <div class="container">
     <div class="section">
