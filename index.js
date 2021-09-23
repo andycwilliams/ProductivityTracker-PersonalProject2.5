@@ -36,6 +36,8 @@ function startTimer(duration, display) {
 
     display.textContent = minutes + ":" + seconds;
 
+    console.log("Tick");
+
     if (--timer < 0) {
         timer = duration;
         console.log("Time's up!");
@@ -52,8 +54,8 @@ const randomQuoteArr = [
   'In the evening, write down the most important things you need to do the next day.',
   'Don\'t write down so much that you overwhelm yourself.',
   'Focus on process, not product.',
-  'Recollection is one of the most effective learning methods.',
-  '"Eat your frogs first."',
+  'Recall is one of the most effective learning methods.',
+  '"Eat your frogs first." Do the most unpleasant tasks first so they\'re out of the way.',
   'Time is not an enemy. When handled correctly, it can even be turned into an ally.',
   'Knowing when to take breaks is just as important as the work itself!',
   'Flash cards are cheap and effective ways to drill yourself on smaller concepts.'
