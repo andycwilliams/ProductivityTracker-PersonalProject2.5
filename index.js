@@ -4,8 +4,9 @@
 // const db = client.db('birds');
 // const collection = db.collection('documents');
 
-let minutesBtn = document.querySelector("#chooseMin");
-let timerBtn = document.querySelector("#timer");
+const minutesBtn = document.querySelector("#chooseMin");
+const timerBtn = document.querySelector("#timer");
+const timerDisplay = document.querySelector('#timerDisplay');
 
 // Start with front end (user interface), get elements I want rendered
 // Then populate with data
@@ -16,12 +17,23 @@ let timerBtn = document.querySelector("#timer");
 
 const chooseMinutes = () => {
   minutesBtn.onclick = function() {
-    let userNo = document.querySelector("#inputNo").value;
+    const userNo = document.querySelector("#inputNo").value;
     console.log(`userNo: ${userNo}`);
+    startTimer(userNo, timerDisplay);
   };
 };
 
 minutesBtn.addEventListener("click", chooseMinutes());
+
+// const chooseMinutes = () => {
+//   minutesBtn.onclick = function() {
+//     let userNo = document.querySelector("#inputNo").value;
+//     console.log(`userNo: ${userNo}`);
+//   };
+//   startTimer();
+// };
+
+// minutesBtn.addEventListener("click", chooseMinutes());
 
 // -------------------------------- Timer Function --------------------------------
 
@@ -100,11 +112,11 @@ const taskContainer = () => {
   };
 };
 
-window.onload = function () {
-  const fiveMinutes = 60 * 5,
-      display = document.querySelector('#timerDisplay');
-  startTimer(fiveMinutes, display);
-};
+// window.onload = function () {
+//   const fiveMinutes = 60 * 5,
+//       display = document.querySelector('#timerDisplay');
+//   startTimer(fiveMinutes, display);
+// };
 
 randomQuoteGenerator();
 taskContainer();
