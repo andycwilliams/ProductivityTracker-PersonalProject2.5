@@ -4,6 +4,9 @@
 // const db = client.db('birds');
 // const collection = db.collection('documents');
 
+let minutesBtn = document.querySelector("#chooseMin");
+let timerBtn = document.querySelector("#timer");
+
 // Start with front end (user interface), get elements I want rendered
 // Then populate with data
 // Don't worry about handlebars. Keep it as simple as possible
@@ -12,46 +15,34 @@
 // -------------------------------- Choose Time Function --------------------------------
 
 const chooseMinutes = () => {
-    // const minutesBtn = document.querySelector("#chooseMin");
-    // console.log(minutesBtn);
-    // const userNo = document.querySelector("#inputNo").value;
-    // console.log(userNo);
-    // const valueInt = parseInt(userNo, 100);
-    // console.log(valueInt);
-
-    let minutesBtn = document.querySelector("#chooseMin");
-    // let randomNo = Math.ceil(Math.random() * 100);
-    minutesBtn.onclick = function() {
-       let userNo = document.querySelector("#inputNo").value;
-      //  let valueInt = parseInt(userNo, 100);
-       console.log(`userNo: ${userNo}`);
-      //  console.log(`valueInt: ${valueInt}`);
-      //  console.log(`randomNo: ${randomNo}, userNo: ${userNo}`);
-    };
+  minutesBtn.onclick = function() {
+    let userNo = document.querySelector("#inputNo").value;
+    console.log(`userNo: ${userNo}`);
+  };
 };
 
-document.querySelector("#chooseMin").addEventListener("click", chooseMinutes());
+minutesBtn.addEventListener("click", chooseMinutes());
 
 // -------------------------------- Timer Function --------------------------------
 
 function startTimer(duration, display) {
   let timer = duration, minutes, seconds;
   setInterval(function () {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
 
-      minutes = minutes < 10 ? minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+    minutes = minutes < 10 ? minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      display.textContent = minutes + ":" + seconds;
+    display.textContent = minutes + ":" + seconds;
 
-      if (--timer < 0) {
-          timer = duration;
-          console.log("Time's up!");
-          // playSound();
-          // handleLoss();
-          // clearInterval(intervalEl);
-      };
+    if (--timer < 0) {
+        timer = duration;
+        console.log("Time's up!");
+        // playSound();
+        // handleLoss();
+        // clearInterval(intervalEl);
+    };
   }, 1000);
 };
 
