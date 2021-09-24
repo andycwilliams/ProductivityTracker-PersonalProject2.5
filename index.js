@@ -7,15 +7,18 @@
 const minutesBtn = document.querySelector("#chooseMin");
 const timerBtn = document.querySelector("#timer");
 const timerDisplay = document.querySelector('#timerDisplay');
+const pauseTimerBtn = document.querySelector("#pauseTimer");
+const resetTimerBtn = document.querySelector("#resetTimer");
+const toggleSoundBtn = document.querySelector("#toggleSound");
+
+const nightlight = document.querySelector("#nightlight");
+const container = document.querySelector(".container");
+let mode = "light";
 
 // Start with front end (user interface), get elements I want rendered
 // Then populate with data
 // Don't worry about handlebars. Keep it as simple as possible
 // Point is to get familiar with serverless and implement it on a project
-
-
-
-
 
 
 
@@ -33,71 +36,45 @@ const chooseMinutes = () => {
 minutesBtn.addEventListener("click", chooseMinutes());
 
 const pauseTimer = () => {
-  
+  //
 };
-minutesBtn.addEventListener("click", pauseTimer());
+pauseTimerBtn.addEventListener("click", pauseTimer());
 
 const resetTimer = () => {
-  clearInterval(myTimer);
-
+  clearInterval(timerBtn);
 };
-minutesBtn.addEventListener("click", resetTimer());
+resetTimerBtn.addEventListener("click", resetTimer());
 
 
 const toggleSound = () => {
-  
+  //
 };
-minutesBtn.addEventListener("click", toggleSound());
-
-
+toggleSoundBtn.addEventListener("click", toggleSound());
 
 // -------------------------------- Light/Dark Mode --------------------------------
 
-const lightMode = () => {
-  
-};
-minutesBtn.addEventListener("click", lightMode());
-
-const darkMode = () => {
-  
-};
-minutesBtn.addEventListener("click", darkMode());
-
-
-
-
-let mode = "light";
-
-// Access toggle switch HTML element
-var nightlight = document.querySelector("#nightlight");
-var container = document.querySelector(".container");
-
-// Set default mode to dark
-
-// Listen for a click event on toggle switch
-themeSwitcher.addEventListener("click", function() {
-  // If mode is dark, apply light background
+nightlight.addEventListener("click", function() {
   if (mode === "dark") {
     mode = "light";
     container.setAttribute("class", "light");
+    console.log("Morning already?")
   }
-  // If mode is light, apply dark background 
   else {
     mode = "dark";
     container.setAttribute("class", "dark");
+    console.log("Nighty night!")
   }
 });
-
 
 // -------------------------------- Timer Function --------------------------------
 
 function startTimer(duration, display) {
-  if (timerBtn.paused){    
-    timerBtn.play();
-    console.log("Timer start!")
-  } else {
-    timerBtn.pause("Timer end!");
-  }
+  // if (timerBtn.paused){    
+  //   timerBtn.play();
+  //   console.log("Timer start!")
+  // } else {
+  //   timerBtn.pause("Timer end!");
+  // }
 
   let timer = duration, minutes, seconds;
   setInterval(function () {
@@ -115,13 +92,8 @@ function startTimer(duration, display) {
         timer = duration;
         console.log("Time's up!");
         // playSound();
-        // handleLoss();
         // clearInterval(intervalEl);
     };
-
-    // if (timer === 0){
-
-    // }
   }, 1000);
 };
 
