@@ -23,17 +23,43 @@ const chooseMinutes = () => {
   };
 };
 
+// TODO: pause button, reset button (consolidate if possible)
+// stop it from just adding time to count
+
 minutesBtn.addEventListener("click", chooseMinutes());
 
-// const chooseMinutes = () => {
-//   minutesBtn.onclick = function() {
-//     let userNo = document.querySelector("#inputNo").value;
-//     console.log(`userNo: ${userNo}`);
-//   };
-//   startTimer();
-// };
+const pauseTimer = () => {
+  
+};
 
-// minutesBtn.addEventListener("click", chooseMinutes());
+minutesBtn.addEventListener("click", chooseMinutes());
+
+
+const resetTimer = () => {
+  clearInterval(myTimer);
+
+};
+
+minutesBtn.addEventListener("click", chooseMinutes());
+
+const lightMode = () => {
+  
+};
+minutesBtn.addEventListener("click", chooseMinutes());
+
+const darkMode = () => {
+  
+};
+minutesBtn.addEventListener("click", chooseMinutes());
+
+const toggleSound = () => {
+  
+};
+minutesBtn.addEventListener("click", chooseMinutes());
+
+
+
+
 
 // -------------------------------- Timer Function --------------------------------
 
@@ -57,6 +83,10 @@ function startTimer(duration, display) {
         // handleLoss();
         // clearInterval(intervalEl);
     };
+
+    // if (timer === 0){
+
+    // }
   }, 1000);
 };
 
@@ -111,12 +141,6 @@ const taskContainer = () => {
       itemEl.appendChild(addItemminutesBtn);
   };
 };
-
-// window.onload = function () {
-//   const fiveMinutes = 60 * 5,
-//       display = document.querySelector('#timerDisplay');
-//   startTimer(fiveMinutes, display);
-// };
 
 randomQuoteGenerator();
 taskContainer();
