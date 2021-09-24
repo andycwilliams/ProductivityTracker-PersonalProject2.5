@@ -13,6 +13,14 @@ const timerDisplay = document.querySelector('#timerDisplay');
 // Don't worry about handlebars. Keep it as simple as possible
 // Point is to get familiar with serverless and implement it on a project
 
+
+
+
+
+
+
+
+
 // -------------------------------- Choose Time Function --------------------------------
 
 const chooseMinutes = () => {
@@ -22,40 +30,33 @@ const chooseMinutes = () => {
     startTimer(userNo, timerDisplay);
   };
 };
-
-// TODO: pause button, reset button (consolidate if possible)
-// stop it from just adding time to count
-
 minutesBtn.addEventListener("click", chooseMinutes());
 
 const pauseTimer = () => {
   
 };
-
-minutesBtn.addEventListener("click", chooseMinutes());
-
+minutesBtn.addEventListener("click", pauseTimer());
 
 const resetTimer = () => {
   clearInterval(myTimer);
 
 };
-
-minutesBtn.addEventListener("click", chooseMinutes());
+minutesBtn.addEventListener("click", resetTimer());
 
 const lightMode = () => {
   
 };
-minutesBtn.addEventListener("click", chooseMinutes());
+minutesBtn.addEventListener("click", lightMode());
 
 const darkMode = () => {
   
 };
-minutesBtn.addEventListener("click", chooseMinutes());
+minutesBtn.addEventListener("click", darkMode());
 
 const toggleSound = () => {
   
 };
-minutesBtn.addEventListener("click", chooseMinutes());
+minutesBtn.addEventListener("click", toggleSound());
 
 
 
@@ -64,6 +65,13 @@ minutesBtn.addEventListener("click", chooseMinutes());
 // -------------------------------- Timer Function --------------------------------
 
 function startTimer(duration, display) {
+  if (timerBtn.paused){    
+    timerBtn.play();
+    console.log("Timer start!")
+  } else {
+    timerBtn.pause("Timer end!");
+  }
+
   let timer = duration, minutes, seconds;
   setInterval(function () {
     minutes = parseInt(timer / 60, 10);
