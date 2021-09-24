@@ -10,6 +10,7 @@ const timerDisplay = document.querySelector('#timerDisplay');
 const pauseTimerBtn = document.querySelector("#pauseTimer");
 const resetTimerBtn = document.querySelector("#resetTimer");
 const toggleSoundBtn = document.querySelector("#toggleSound");
+const taskContainer = document.querySelector(".taskContainer");
 
 const nightlight = document.querySelector("#nightlight");
 const container = document.querySelector(".container");
@@ -19,8 +20,6 @@ let mode = "light";
 // Then populate with data
 // Don't worry about handlebars. Keep it as simple as possible
 // Point is to get familiar with serverless and implement it on a project
-
-
 
 
 
@@ -35,16 +34,21 @@ const chooseMinutes = () => {
 };
 minutesBtn.addEventListener("click", chooseMinutes());
 
+// -------------------------------- Pause Timer --------------------------------
+
 const pauseTimer = () => {
   //
 };
 pauseTimerBtn.addEventListener("click", pauseTimer());
+
+// -------------------------------- Reset Timer --------------------------------
 
 const resetTimer = () => {
   clearInterval(timerBtn);
 };
 resetTimerBtn.addEventListener("click", resetTimer());
 
+// -------------------------------- Toggle Sound --------------------------------
 
 const toggleSound = () => {
   //
@@ -56,12 +60,12 @@ toggleSoundBtn.addEventListener("click", toggleSound());
 nightlight.addEventListener("click", function() {
   if (mode === "dark") {
     mode = "light";
-    container.setAttribute("class", "light");
+    // container.setAttribute("class", "light");
     console.log("Morning already?")
   }
   else {
     mode = "dark";
-    container.setAttribute("class", "dark");
+    // container.setAttribute("class", "dark");
     console.log("Nighty night!")
   }
 });
@@ -117,7 +121,7 @@ const randomQuoteGenerator = () => {
 
 // -------------------------------- Task Generator --------------------------------
 
-const taskContainer = () => {
+const taskListGenerator = () => {
   for (let i = 0; i < 10; i++){
       const itemEl = document.createElement("div");
       // const hourEl = document.createElement("div");
@@ -142,7 +146,7 @@ const taskContainer = () => {
       //     itemEl.classList.add("future");
       // };
 
-      // timeBlockContainer.appendChild(itemEl);
+      taskContainer.appendChild(itemEl);
       // itemEl.appendChild(hourEl);
       itemEl.appendChild(textAreaEl);
       itemEl.appendChild(addItemminutesBtn);
@@ -150,7 +154,7 @@ const taskContainer = () => {
 };
 
 randomQuoteGenerator();
-taskContainer();
+taskListGenerator();
 
 // ----------------------------------------------------------------
 
