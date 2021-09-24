@@ -43,6 +43,16 @@ const resetTimer = () => {
 };
 minutesBtn.addEventListener("click", resetTimer());
 
+
+const toggleSound = () => {
+  
+};
+minutesBtn.addEventListener("click", toggleSound());
+
+
+
+// -------------------------------- Light/Dark Mode --------------------------------
+
 const lightMode = () => {
   
 };
@@ -53,13 +63,30 @@ const darkMode = () => {
 };
 minutesBtn.addEventListener("click", darkMode());
 
-const toggleSound = () => {
-  
-};
-minutesBtn.addEventListener("click", toggleSound());
 
 
 
+let mode = "light";
+
+// Access toggle switch HTML element
+var nightlight = document.querySelector("#nightlight");
+var container = document.querySelector(".container");
+
+// Set default mode to dark
+
+// Listen for a click event on toggle switch
+themeSwitcher.addEventListener("click", function() {
+  // If mode is dark, apply light background
+  if (mode === "dark") {
+    mode = "light";
+    container.setAttribute("class", "light");
+  }
+  // If mode is light, apply dark background 
+  else {
+    mode = "dark";
+    container.setAttribute("class", "dark");
+  }
+});
 
 
 // -------------------------------- Timer Function --------------------------------
