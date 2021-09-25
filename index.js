@@ -21,8 +21,6 @@ let mode = "light";
 // Don't worry about handlebars. Keep it as simple as possible
 // Point is to get familiar with serverless and implement it on a project
 
-
-
 // -------------------------------- Choose Time Function --------------------------------
 
 const chooseMinutes = () => {
