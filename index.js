@@ -7,7 +7,7 @@
 const minutesBtn = document.querySelector("#chooseMin");
 const timerBtn = document.querySelector("#timer");
 const timerDisplay = document.querySelector('#timerDisplay');
-const pauseTimerBtn = document.querySelector("#pauseTimer");
+const paustimerDisplayrBtn = document.querySelector("#paustimerDisplayr");
 const resetTimerBtn = document.querySelector("#resetTimer");
 const toggleSoundBtn = document.querySelector("#toggleSound");
 const taskContainer = document.querySelector(".taskContainer");
@@ -34,10 +34,10 @@ minutesBtn.addEventListener("click", chooseMinutes());
 
 // -------------------------------- Pause Timer --------------------------------
 
-const pauseTimer = () => {
+const paustimerDisplayr = () => {
   //
 };
-pauseTimerBtn.addEventListener("click", pauseTimer());
+paustimerDisplayrBtn.addEventListener("click", paustimerDisplayr());
 
 // -------------------------------- Reset Timer --------------------------------
 
@@ -153,6 +153,83 @@ const taskListGenerator = () => {
 
 randomQuoteGenerator();
 taskListGenerator();
+
+// -------------------------------- Stopwatch --------------------------------
+
+{/* <div id="stopwatch">
+  <!-- CURRENT TIME -->
+  <div id="sw-time">00:00:00</div>
+ 
+  <!-- CONTROLS -->
+  <input type="button" value="Reset" id="sw-rst" disabled/>
+  <input type="button" value="Start" id="sw-go" disabled/>
+</div> */}
+
+const startStop = {
+  // (A) INITIALIZE
+  timerShow: null, // HTML time display
+  timerReset: null, // HTML reset button
+  timerBegin: null, // HTML start/stop button
+  init: function () {
+    // (A1) GET HTML ELEMENTS
+    startStop.timerShow = document.getElementById("startStop-show");
+    startStop.timerReset = document.getElementById("startStop-reset");
+    startStop.timerBegin = document.getElementById("startStop-begin");
+
+    // (A2) ENABLE BUTTON CONTROLS
+    startStop.timerReset.addEventListener("click", startStop.reset);
+    startStop.timerReset.disabled = false;
+    startStop.timerBegin.addEventListener("click", startStop.start);
+    startStop.timerBegin.disabled = false;
+  },
+
+  // (B) TIMER ACTION
+  timer: null, // timer object
+  now: 0, // current elapsed time
+  tick: function () {
+    // (B1) CALCULATE HOURS, MINS, SECONDS
+    startStop.now++;
+    const remain = startStop.now;
+    const hours = Math.floor(remain / 3600);
+    remain -= hours * 3600;
+    const mins = Math.floor(remain / 60);
+    remain -= mins * 60;
+    const secs = remain;
+
+    // (B2) UPDATE THE DISPLAY TIMER
+    if (hours < 10) { hours = "0" + hours; };
+    if (mins < 10) { mins = "0" + mins; };
+    if (secs < 10) { secs = "0" + secs; };
+    startStop.timerShow.innerHTML = hours + ":" + mins + ":" + secs;
+  },
+  
+  // (C) START!
+  start: function () {
+    startStop.timer = setInterval(startStop.tick, 1000);
+    startStop.timerBegin.value = "Stop";
+    startStop.timerBegin.removeEventListener("click", startStop.start);
+    startStop.timerBegin.addEventListener("click", startStop.stop);
+  },
+
+  // (D) STOP
+  stop: function () {
+    clearInterval(startStop.timer);
+    startStop.timer = null;
+    startStop.timerBegin.value = "Start";
+    startStop.timerBegin.removeEventListener("click", startStop.stop);
+    startStop.timerBegin.addEventListener("click", startStop.start);
+  },
+
+  // (E) RESET
+  reset: function () {
+    if (startStop.timer != null){ 
+      startStop.stop(); 
+    };
+    startStop.now = -1;
+    startStop.tick();
+  }
+};
+window.addEventListener("load", startStop.init);
 
 // ----------------------------------------------------------------
 
