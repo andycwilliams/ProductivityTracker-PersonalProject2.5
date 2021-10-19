@@ -12,7 +12,6 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tasks", {
   useNewUrlParser: true,
-  useFindAndModify: false,
 });
 
 app.use(require("./routes"));
