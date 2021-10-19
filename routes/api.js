@@ -10,6 +10,20 @@ router.get("/", async (req, res) => {
   // console.log(allTasks);
 });
 
+router.get("/task/:id", async (req, res) => {
+  try {
+    const tasks = await Task.findByPk(req.params.id);
+    if (!tasks) {
+      res.status(404).json({ message: "No task with this ID." });
+      return;
+    }
+    const task = tasks.get({ plain: true });
+    res.render("task", task);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post("/api/Task", ({ body }, res) => {
   Task.create(body)
     .then((taskdb) => {
