@@ -21,14 +21,9 @@ let mode = "light";
 // Don't worry about handlebars. Keep it as simple as possible
 // Point is to get familiar with serverless and implement it on a project
 
-// -------------------------------- Toggle Sound --------------------------------
-
-const toggleSound = () => {
-  //
-};
-toggleSoundBtn.addEventListener("click", toggleSound());
-
 // -------------------------------- Light/Dark Mode --------------------------------
+
+console.log(nightlight);
 
 nightlight.addEventListener("click", function () {
   if (mode === "dark") {
@@ -100,21 +95,6 @@ const taskListGenerator = () => {
 
 randomQuoteGenerator();
 taskListGenerator();
-
-// -------------------------------- Add Task --------------------------------
-
-// document.getElementById("tweet").addEventListener("click", () => {
-//   const getTweetData = () => ({
-//       author: document.getElementById("author").value,
-//       body: document.getElementById("body").value,
-//   });
-//   console.log("sending a tweet: ", getTweetData());
-//   axios
-//       .post("/.netlify/functions/tweeting-api", {
-//           body: JSON.stringify(getTweetData()),
-//       })
-//       .then(console.log);
-// });
 
 // ----------------------------------------------------------------
 
