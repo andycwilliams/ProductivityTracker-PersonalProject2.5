@@ -4,12 +4,6 @@
 // const db = client.db('birds');
 // const collection = db.collection('documents');
 
-const minutesBtn = document.querySelector("#chooseMin");
-const timerBtn = document.querySelector("#timer");
-const timerDisplay = document.querySelector("#timerDisplay");
-const paustimerDisplayrBtn = document.querySelector("#paustimerDisplayr");
-const resetTimerBtn = document.querySelector("#resetTimer");
-const toggleSoundBtn = document.querySelector("#toggleSound");
 const taskContainer = document.querySelector(".taskContainer");
 
 const nightlight = document.querySelector("#nightlight");
@@ -95,6 +89,15 @@ const taskListGenerator = () => {
 
 randomQuoteGenerator();
 taskListGenerator();
+
+// ----------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".dropdown-trigger");
+  var instances = M.Dropdown.init(elems, options);
+});
+
+$(".dropdown-trigger").dropdown();
 
 // ----------------------------------------------------------------
 

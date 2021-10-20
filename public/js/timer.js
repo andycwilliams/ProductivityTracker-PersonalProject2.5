@@ -1,10 +1,9 @@
 const minutesBtn = document.querySelector("#chooseMin");
 const timerBtn = document.querySelector("#timer");
 const timerDisplay = document.querySelector("#timerDisplay");
-const paustimerDisplayBtn = document.querySelector("#paustimerDisplay");
+const pauseTimerBtn = document.querySelector("#pauseTimer");
 const resetTimerBtn = document.querySelector("#resetTimer");
 const toggleSoundBtn = document.querySelector("#toggleSound");
-const taskContainer = document.querySelector(".taskContainer");
 
 // -------------------------------- Set Timer --------------------------------
 
@@ -19,10 +18,10 @@ minutesBtn.addEventListener("click", setTimer());
 
 // -------------------------------- Pause Timer --------------------------------
 
-const paustimerDisplay = () => {
+const pauseTimer = () => {
   //
 };
-paustimerDisplayBtn.addEventListener("click", paustimerDisplay());
+pauseTimerBtn.addEventListener("click", pauseTimer());
 
 // -------------------------------- Reset Timer --------------------------------
 
@@ -155,7 +154,7 @@ const startStop = {
     startStop.tick();
   },
 };
-window.addEventListener("load", startStop.init);
+// window.addEventListener("load", startStop.init);
 
 // ----------------------------------------------------------------
 

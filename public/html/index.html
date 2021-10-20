@@ -39,34 +39,87 @@
 
       <div class="row center">
         <h2><a id="timerDisplay" class="truncate">00:00</a></h2>
-          <strong>Enter how many minutes you want:</strong><p>(25 is recommended)</p>
-          <form class="row center">
+          <strong>Enter how many minutes you want:</strong><p>(25 is recommended)</p><br>
+          <!-- <form class="row center">
             <div class="input-field col s1">
             <input id="inputNo" value="25" type="text" name="number" />
-          </form>
+          </form> -->
+          <a id="inputNo" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Minutes</a>
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">1</a></li>
+            <li><a href="#!">2</a></li>
+            <!-- <li class="divider" tabindex="-1"></li> -->
+            <li><a href="#!">3</a></li>
+            <li><a href="#!">4</a></li>
+            <li><a href="#!">5</a></li>
+            <li><a href="#!">6</a></li>
+            <li><a href="#!">7</a></li>
+            <li><a href="#!">8</a></li>
+            <li><a href="#!">9</a></li>
+            <li><a href="#!">10</a></li>
+            <li><a href="#!">11</a></li>
+            <li><a href="#!">12</a></li>
+            <li><a href="#!">13</a></li>
+            <li><a href="#!">14</a></li>
+            <li><a href="#!">15</a></li>
+            <li><a href="#!">16</a></li>
+            <li><a href="#!">17</a></li>
+            <li><a href="#!">18</a></li>
+            <li><a href="#!">19</a></li>
+            <li><a href="#!">20</a></li>
+            <li><a href="#!">21</a></li>
+            <li><a href="#!">22</a></li>
+            <li><a href="#!">23</a></li>
+            <li><a href="#!">24</a></li>
+            <li><a href="#!">25</a></li>
+            <li><a href="#!">26</a></li>
+            <li><a href="#!">27</a></li>
+            <li><a href="#!">28</a></li>
+            <li><a href="#!">29</a></li>
+            <li><a href="#!">30</a></li>
+          </ul>
+
         </div><br>
         <div class="row center">
           <p id="output"></p>
-          <a id="chooseMin" class="btn-large waves-effect waves-light blue">Set Timer</a>
+          <!-- <a id="chooseMin" class="btn-large waves-effect waves-light blue">Set Timer</a> -->
           <a id="timer" class="btn-large waves-effect waves-light blue">Start Timer</a><br><br>
-          <a id="pauseTimer" class="btn-small waves-effect waves-light blue">Pause Timer</a>
+          <!-- <a id="pauseTimer" class="btn-small waves-effect waves-light blue">Pause Timer</a> -->
           <a id="resetTimer" class="btn-small waves-effect waves-light blue">Reset Timer</a>
-      </div><br>
+      <!-- </div><br> -->
 
-      <div class="row center">
+  <div class="switch">
+    <h5>Timer</h5>
+    <label>
+      On
+      <input type="checkbox" id="chooseMin">
+      <span class="lever"></span>
+      Off
+    </label>
+  </div>
+  <div class="switch">
+    <h5>Night Mode</h5>
+    <label>
+      On
+      <input type="checkbox" id="chooseMin">
+      <span class="lever"></span>
+      Off
+    </label>
+  </div>
+  <div class="switch">
+    <h5>Sound</h5>
+    <label>
+      On
+      <input type="checkbox" id="chooseMin">
+      <span class="lever"></span>
+      Off
+    </label>
+  </div>
+
+      <!-- <div class="row center">
         <a id="nightlight" class="btn-small waves-effect waves-light blue" data-toggle="button">Toggle Light/Night Mode</a>
-
-        <!-- <div class="row toggle">
-          <div class="col"><p>Night Mode</p></div>
-          <label class="switch col">
-            <input type="checkbox" id="nightlight">
-            <span class="slider round"></span>
-          </label>
-          <div class="col"><p>Light Mode</p></div>
-        </div> -->
-
         <a id="toggleSound" class="btn-small waves-effect waves-light blue">Toggle Sound</a>
-      </div><br><br>
+      </div><br><br> -->
 
     </div>
   </div>
@@ -118,6 +171,7 @@
   <script src="../js/materialize.js"></script>
   <script src="../js/init.js"></script>
   <script src="../js/index.js"></script>
+  <script src="../js/timer.js"></script>
   </div>
   </body>
 </html>
