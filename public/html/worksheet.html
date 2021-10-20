@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Productivity Tracker - Worksheet</title>
     <link rel="stylesheet" href="../styles/reset.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <title>Productivity Tracker - Worksheet</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>Header</h1>
-        <div>Links</div>
-        <div>Daily Study Sheet</div>
-        <div>Distractions/Random thoughts</div>
-    </header>
+    <header class="nav-wrapper">
+        <div>
+          <nav class="blue lighten-1">
+            <div role="navigation">
+              <a href="#" class="brand-logo">Productivity Tracker<i class="material-icons" style="font-size: 50px">av_timer</i>
+              </a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Information</a></li>
+                <li><a href="worksheet.html">Worksheet</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
 
     <main>
         <input id="taskField" type="text" placeholder="Enter task" />
