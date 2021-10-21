@@ -5,7 +5,6 @@
 // const collection = db.collection('documents');
 
 const taskContainer = document.querySelector(".taskContainer");
-
 const nightlight = document.querySelector("#nightlight");
 const container = document.querySelector(".container");
 let mode = "light";
@@ -16,8 +15,6 @@ let mode = "light";
 // Point is to get familiar with serverless and implement it on a project
 
 // -------------------------------- Light/Dark Mode --------------------------------
-
-console.log(nightlight);
 
 nightlight.addEventListener("click", function () {
   if (mode === "dark") {

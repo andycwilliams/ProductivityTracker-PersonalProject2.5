@@ -4,6 +4,7 @@ const timerDisplay = document.querySelector("#timerDisplay");
 const pauseTimerBtn = document.querySelector("#pauseTimer");
 const resetTimerBtn = document.querySelector("#resetTimer");
 const toggleSoundBtn = document.querySelector("#toggleSound");
+let soundMode = "soundOff";
 
 // -------------------------------- Set Timer --------------------------------
 
@@ -26,17 +27,22 @@ pauseTimerBtn.addEventListener("click", pauseTimer());
 // -------------------------------- Reset Timer --------------------------------
 
 const resetTimer = () => {
-  clearInterval(timerBtn);
+  console.log("Reset timer");
+  // clearInterval(timerBtn);
 };
 resetTimerBtn.addEventListener("click", resetTimer());
 
 // -------------------------------- Toggle Sound --------------------------------
 
-const toggleSound = () => {
-  console.log("Sound on.");
-  console.log("Sound off.");
-};
-toggleSoundBtn.addEventListener("click", toggleSound());
+toggleSoundBtn.addEventListener("click", function () {
+  if (soundMode === "soundOn") {
+    soundMode = "soundOn";
+    console.log("Sound on.");
+  } else {
+    soundMode = "soundOff";
+    console.log("Sound off.");
+  }
+});
 
 // -------------------------------- Timer Function --------------------------------
 
