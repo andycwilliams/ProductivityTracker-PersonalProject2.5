@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Task = require("../models/tasklist.js");
+const Task = require("../../models/tasklist.js");
 
 router.get("/", async (req, res) => {
   // res.send("Hello World!");
