@@ -24,7 +24,7 @@ router.get("/task/:id", async (req, res) => {
   }
 });
 
-router.post("/api/Task", ({ body }, res) => {
+router.post("/api/task", ({ body }, res) => {
   Task.create(body)
     .then((taskdb) => {
       res.json(taskdb);
