@@ -34,7 +34,7 @@ const randomQuoteArr = [
   "In the evening, write down the most important things you need to do the next day.",
   "Don't write down so much that you overwhelm yourself.",
   "Focus on process, not product.",
-  "Recall is one of the most effective learning methods.",
+  "Recall is one of the most effective learning methods and can be done anywhere.",
   '"Eat your frogs first." Do the most unpleasant tasks first so they\'re out of the way.',
   "Time is not an enemy. When handled correctly, it can even be turned into an ally.",
   "Knowing when to take breaks is just as important as the work itself!",
