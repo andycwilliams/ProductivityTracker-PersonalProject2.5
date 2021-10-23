@@ -21,8 +21,10 @@ minutesBtn.addEventListener("click", setTimer());
 // -------------------------------- Reset Timer --------------------------------
 
 const resetTimer = () => {
-  // console.log("Reset timer");
-  clearInterval(timerBtn);
+  resetTimerBtn.onclick = function () {
+    console.log("Reset timer");
+    startTimer(0, timerDisplay);
+  };
 };
 resetTimerBtn.addEventListener("click", resetTimer());
 
@@ -60,14 +62,12 @@ function startTimer(duration, display) {
 
     display.textContent = minutes + ":" + seconds;
 
-    // console.log("Tick");
+    // timer--;
 
-    timer--;
-
-    if (timer === 0) {
+    if (--timer < 0) {
       timer = duration;
       console.log("Time's up!");
-      timerBtn.innerHTML = "Time's up!";
+      alert("Time's up!");
       // playSound();
       // clearInterval(intervalEl);
     }
@@ -75,17 +75,6 @@ function startTimer(duration, display) {
 }
 
 // -------------------------------- Stopwatch --------------------------------
-
-// {
-//   <div id="stopwatch">
-//   <!-- CURRENT TIME -->
-//   <div id="sw-time">00:00:00</div>
-
-//   <!-- CONTROLS -->
-//   <input type="button" value="Reset" id="sw-rst" disabled/>
-//   <input type="button" value="Start" id="sw-go" disabled/>
-// </div>
-// }
 
 const startStop = {
   // (A) INITIALIZE
