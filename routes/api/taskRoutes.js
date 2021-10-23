@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/task/:id", async (req, res) => {
+  console.log(`Method ${req.method} received.`);
   try {
     const tasks = await Task.findByPk(req.params.id);
     if (!tasks) {
@@ -28,6 +29,7 @@ router.get("/task/:id", async (req, res) => {
 });
 
 router.post("/api/task", ({ body }, res) => {
+  console.log(`Method ${req.method} received.`);
   Task.create(body)
     .then((taskdb) => {
       res.json(taskdb);
