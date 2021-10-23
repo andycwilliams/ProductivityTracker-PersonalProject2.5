@@ -11,8 +11,9 @@ let soundMode = "soundOff";
 const setTimer = () => {
   minutesBtn.onclick = function () {
     const userNo = document.querySelector("#inputNo").value;
-    console.log(`userNo: ${userNo}`);
-    startTimer(userNo, timerDisplay);
+    const userNoMinutes = userNo * 60;
+    console.log(`userNoMinutes: ${userNoMinutes}`);
+    startTimer(userNoMinutes, timerDisplay);
   };
 };
 minutesBtn.addEventListener("click", setTimer());
@@ -21,14 +22,13 @@ minutesBtn.addEventListener("click", setTimer());
 
 const resetTimer = () => {
   // console.log("Reset timer");
-  // clearInterval(timerBtn);
+  clearInterval(timerBtn);
 };
 resetTimerBtn.addEventListener("click", resetTimer());
 
 // -------------------------------- Toggle Sound --------------------------------
 
 toggleSoundBtn.addEventListener("click", function () {
-  console.log("Sound toggled.");
   if (soundMode === "soundOn") {
     soundMode = "soundOff";
     console.log("Sound on.");
@@ -60,11 +60,14 @@ function startTimer(duration, display) {
 
     display.textContent = minutes + ":" + seconds;
 
-    console.log("Tick");
+    // console.log("Tick");
 
-    if (--timer < 0) {
+    timer--;
+
+    if (timer === 0) {
       timer = duration;
       console.log("Time's up!");
+      timerBtn.innerHTML = "Time's up!";
       // playSound();
       // clearInterval(intervalEl);
     }
