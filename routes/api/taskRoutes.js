@@ -3,7 +3,7 @@ const Task = require("../../models/Tasklist.js");
 
 router.get("/", async (req, res) => {
   // res.send("Hello World!");
-  console.log(`Method ${req.method} received.`);
+  console.log(`/ Method ${req.method} received.`);
   // res.sendFile(__dirname + "/public/html/index.html");
 
   // const allTasks = await Task.findAll().catch((err) => {
@@ -11,6 +11,16 @@ router.get("/", async (req, res) => {
   // });
   // res.status(200).json(allTasks);
   // console.log(allTasks);
+});
+
+router.get("/info", async (req, res) => {
+  // res.send("Hello World!");
+  console.log(`info Method ${req.method} received.`);
+});
+
+router.get("/worksheet", async (req, res) => {
+  // res.send("Hello World!");
+  console.log(`worksheet Method ${req.method} received.`);
 });
 
 router.get("/task/:id", async (req, res) => {
