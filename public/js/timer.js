@@ -10,7 +10,7 @@ let soundMode = "soundOff";
 
 const setTimer = () => {
   minutesBtn.onclick = function () {
-    const userNo = document.querySelector("#inputNo").value;
+    const userNo = document.querySelector("#dropdown1").value;
     console.log(`userNo: ${userNo}`);
     startTimer(userNo, timerDisplay);
   };
@@ -35,11 +35,12 @@ resetTimerBtn.addEventListener("click", resetTimer());
 // -------------------------------- Toggle Sound --------------------------------
 
 toggleSoundBtn.addEventListener("click", function () {
+  console.log("Sound toggled.");
   if (soundMode === "soundOn") {
-    soundMode = "soundOn";
+    soundMode = "soundOff";
     console.log("Sound on.");
   } else {
-    soundMode = "soundOff";
+    soundMode = "soundOn";
     console.log("Sound off.");
   }
 });
