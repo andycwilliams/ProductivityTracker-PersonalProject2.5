@@ -1,7 +1,7 @@
 const minutesBtn = document.querySelector("#chooseMin");
 const timerBtn = document.querySelector("#timer");
 const timerDisplay = document.querySelector("#timerDisplay");
-const pauseTimerBtn = document.querySelector("#pauseTimer");
+// const pauseTimerBtn = document.querySelector("#pauseTimer");
 const resetTimerBtn = document.querySelector("#resetTimer");
 const toggleSoundBtn = document.querySelector("#toggleSound");
 let soundMode = "soundOff";
@@ -10,24 +10,17 @@ let soundMode = "soundOff";
 
 const setTimer = () => {
   minutesBtn.onclick = function () {
-    const userNo = document.querySelector("#dropdown1").value;
+    const userNo = document.querySelector("#inputNo").value;
     console.log(`userNo: ${userNo}`);
     startTimer(userNo, timerDisplay);
   };
 };
 minutesBtn.addEventListener("click", setTimer());
 
-// -------------------------------- Pause Timer --------------------------------
-
-const pauseTimer = () => {
-  //
-};
-pauseTimerBtn.addEventListener("click", pauseTimer());
-
 // -------------------------------- Reset Timer --------------------------------
 
 const resetTimer = () => {
-  console.log("Reset timer");
+  // console.log("Reset timer");
   // clearInterval(timerBtn);
 };
 resetTimerBtn.addEventListener("click", resetTimer());
@@ -200,3 +193,10 @@ const startStop = {
 //       }
 //   }, 1000);
 // }
+
+// -------------------------------- Pause Timer --------------------------------
+
+// const pauseTimer = () => {
+//   //
+// };
+// pauseTimerBtn.addEventListener("click", pauseTimer());
