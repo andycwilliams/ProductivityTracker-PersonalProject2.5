@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const Task = require("../../models/tasklist.js");
+const Task = require("../../models/Tasklist.js");
 
 router.get("/", async (req, res) => {
   // res.send("Hello World!");
   console.log(`Method ${req.method} received.`);
-  res.sendFile(__dirname + "/public/html/index.html");
+  // res.sendFile(__dirname + "/public/html/index.html");
 
   // const allTasks = await Task.findAll().catch((err) => {
   //   res.status(500).json("Cannot find tasks.");
