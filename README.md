@@ -1,7 +1,7 @@
 # Daily Productivity Tracker
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Tracker to plan out productivity for the day, whether by the Pomodoro Technique or a custom schedule. My submission for University of Oregpn's Full-Stack Development Boot Camp personal project. Designed to be intuitive and ease anxiety, not end up causing it as with other productivity tools.
+An intuitive tracker to plan out and complete tasks for the day, whether using the Pomodoro Technique or any other. This is my submission for University of Oregon's Full-Stack Development Boot Camp personal project. Designed to ease anxiety and not add to it, the way some productivity tools may do.
 
 ![Screenshot of deployed application, homepage of site with timer and random tip](/screenshot.png?raw=true "Screenshot of deployed application")
 
